@@ -4,8 +4,8 @@ export default function Login() {
     return (
         <>
             <main id="container" className="flex flex-col min-h-screen md:flex-row">
-                <section id="login-form" className="p-6 md:w-1/2 md:flex md:flex-col justify-center">
-                    <header id="Title-And-Oauth-Next-Feature" className="mt-2">
+                <section id="login-form" className="p-6 md:w-1/2 md:flex md:flex-col justify-center md:p-8 lg:p-10 xl:p-12 2xl:p-14">
+                    <header id="Title-And-Oauth-Next-Feature" className="mt-2 md:mt-4 lg:mt-6 xl:mt-8 2xl:mt-10">
                         <h1 className="text-gray-900 dark:text-white font-semibold text-xl md:text-2xl">Login to <span className="">Qonnect By Dutaqu</span></h1>
                     </header>
                     <hr className="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -37,19 +37,19 @@ export default function Login() {
                             </div>
                             <button className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  w-full md:text-base">Sign In To Your Account</button>
                         </form>
-                        <footer className="mb-2">
+                        <footer className="mb-2 md:mb-4 lg:mb-6 xl:mb-8 2xl:mb-10">
                             <p className="text-sm font-light text-gray-500 dark:text-gray-400 md:text-base">Doesn't have an account?<a href="#" className="font-medium text-font-600 hover:underline dark:text-primary-500 ml-1 md:text-font-600">Sign Up</a></p>
                         </footer>
                     </div>
                 </section>
                 <aside id="content" className="flex-grow flex flex-col bg-[#2563eb] md:w-1/2 md:justify-center">
-                    <div id="container" className="flex flex-col justify-evenly flex-grow p-4 md:justify-center md:flex-grow-0 md:min-h-1/2">
+                    <div id="container" className="flex flex-col justify-evenly flex-grow p-6 md:justify-center md:flex-grow-0 md:min-h-1/2 md:p-8 lg:p-10 xl:p-12 2xl:p-14">
                         <div id="image-logo-and-title" className="mt-2 mb-2 md:mb-0 md:mt-0">
                             <img src={null} alt="" />
                             <h2 className="text-xl font-semibold text-white md:text-2xl">Qonnect By Dutaqu</h2>
                         </div>
-                        <div id="content-description" className="mb-2 mt-2 space-y-2 md:space-y-6 md:mt-10 md:mb-10">
-                            <h1 className="text-2xl font-bold text-white md:text-3xl">Explore the world’s leading design portfolios.</h1>
+                        <div id="content-description" className="mb-2 mt-2 space-y-2 md:space-y-6 md:mt-10 lg:mt-12 xl:14 2xl:mt-16 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16 lg:space-y-8 xl:space-y-10 2xl:space-y-12">
+                            <h1 className="text-2xl font-bold text-white md:text-3xl">Helping other's with our connection's.</h1>
                             <p className="text-xs text-white md:text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis, quia aliquid et reiciendis deserunt doloribus soluta accusamus vero non impedit praesentium molestiae omnis nobis!</p>
                         </div>
                         <div id="contributor-logo-and-how-many-had-got-helps" className="mb-2 mt-2 md:mb-0 md:mt-0 flex md:items-center">
