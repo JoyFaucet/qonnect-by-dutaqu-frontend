@@ -1,10 +1,12 @@
-import Image from "next/image";
+import AsideTemplate from "../components/AsideTemplate";
+import SectionCore from "../components/SectionCore";
+import BareBone from "../components/BareBone";
 
 export default function Login() {
     return (
         <>
-            <main id="container" className="flex flex-col min-h-screen md:flex-row">
-                <section id="login-form" className="p-6 md:w-1/2 md:flex md:flex-col justify-center md:p-8 lg:p-10 xl:p-12 2xl:p-14">
+            <BareBone>
+                <SectionCore>
                     <header id="Title-And-Oauth-Next-Feature" className="mt-2 md:mt-4 lg:mt-6 xl:mt-8 2xl:mt-10">
                         <h1 className="text-gray-900 dark:text-white font-semibold text-xl md:text-2xl">Login to <span className="">Qonnect By Dutaqu</span></h1>
                     </header>
@@ -13,19 +15,44 @@ export default function Login() {
                         <form action="" className="">
                             <div id="email" className="mb-4">
                                 <label htmlFor="" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white md:text-base">Email</label>
-                                <input type="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Input your email" />
+                                <input
+                                    type="email"
+                                    placeholder="Input your email"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+             block w-full p-2 transition-all duration-300 ease-in-out 
+             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
+             focus:shadow-md focus:scale-105 
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                />
                             </div>
                             <div id="password" className="mb-9">
                                 <label htmlFor="" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white md:text-base">Password</label>
-                                <input type="password" placeholder="Input your password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                <input
+                                    type="password"
+                                    placeholder="Input your password"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+             block w-full p-2 transition-all duration-300 ease-in-out 
+             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
+             focus:shadow-md focus:scale-105 
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                />
+
                             </div>
                             <div id="remember-me-forgot-password" className="mb-9 flex justify-between ">
                                 <div className="flex items-center">
                                     <input
                                         id="link-checkbox"
                                         type="checkbox"
-                                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                        className="w-4 h-4 text-blue-600 bg-gray-100 border border-gray-300 rounded-sm 
+             focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
+             transition-all duration-300 ease-in-out 
+             hover:border-blue-400 hover:bg-blue-50 
+             dark:bg-gray-700 dark:border-gray-600 dark:ring-offset-gray-800 
+             dark:focus:ring-blue-600 dark:focus:border-blue-500"
                                     />
+
                                     <label
                                         htmlFor="link-checkbox"
                                         className="ms-2 text-sm md:text-base font-medium text-gray-900 dark:text-gray-300"
@@ -41,42 +68,9 @@ export default function Login() {
                             <p className="text-sm font-light text-gray-500 dark:text-gray-400 md:text-base">Doesn't have an account?<a href="#" className="font-medium text-font-600 hover:underline dark:text-primary-500 ml-1 md:text-font-600">Sign Up</a></p>
                         </footer>
                     </div>
-                </section>
-                <aside id="content" className="flex-grow flex flex-col bg-[#2563eb] md:w-1/2 md:justify-center">
-                    <div id="container" className="flex flex-col justify-evenly flex-grow p-6 md:justify-center md:flex-grow-0 md:min-h-1/2 md:p-8 lg:p-10 xl:p-12 2xl:p-14">
-                        <div id="image-logo-and-title" className="mt-2 mb-2 md:mb-0 md:mt-0">
-                            <img src={null} alt="" />
-                            <h2 className="text-xl font-semibold text-white md:text-2xl">Qonnect By Dutaqu</h2>
-                        </div>
-                        <div id="content-description" className="mb-2 mt-2 space-y-2 md:space-y-6 md:mt-10 lg:mt-12 xl:14 2xl:mt-16 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16 lg:space-y-8 xl:space-y-10 2xl:space-y-12">
-                            <h1 className="text-2xl font-bold text-white md:text-3xl">Helping other's with our connection's.</h1>
-                            <p className="text-xs text-white md:text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis, quia aliquid et reiciendis deserunt doloribus soluta accusamus vero non impedit praesentium molestiae omnis nobis!</p>
-                        </div>
-                        <div id="contributor-logo-and-how-many-had-got-helps" className="mb-2 mt-2 md:mb-0 md:mt-0 flex md:items-center">
-                            <div id="picture-of-our-partner-vendors" className="w-fit h-fit mr-2">
-                                <div className="flex -space-x-4 rtl:space-x-reverse">
-                                    <Image className="w-10 h-10 border-2 border-[#2563eb] rounded-full" src="/vercel.svg" alt="" 
-                                        width={10}
-                                        height={10}
-                                    />    
-                                    <Image className="w-10 h-10 border-2 border-[#2563eb] rounded-full" src="/vercel.svg" alt="" 
-                                        width={10}
-                                        height={10}
-                                    /> 
-                                    <Image className="w-10 h-10 border-2 border-[#2563eb] rounded-full" src="/vercel.svg" alt="" 
-                                        width={10}
-                                        height={10}
-                                    /> 
-                                    <a className="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-[#2563eb] rounded-full hover:bg-gray-600 dark:border-[#2563eb]" href="#">+99</a>
-                                </div>
-                            </div>
-                            <div id="teks-of-how-many-got-help" className="flex items-center">
-                                <p className="text-white border-l-1 pl-2 text-xs h-fit md:text-sm">With Over <span className="font-bold"> 99+</span> Contributor's</p>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-            </main>
+                </SectionCore>
+                <AsideTemplate />
+            </BareBone>
         </>
     )
 }
