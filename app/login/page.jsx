@@ -5,7 +5,7 @@ import SectionCore from "../components/SectionCore";
 import BareBone from "../components/BareBone";
 import { useState } from "react";
 import { loginUser } from "../request-api/login";
-import { SubmitButton } from "../components/button-login/button";
+import SubmitButton from "../components/button-login/button";
 
 export default function Login() {
     const [email, setEmail] = useState("");

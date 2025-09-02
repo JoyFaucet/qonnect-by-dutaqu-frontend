@@ -10,8 +10,8 @@ export async function loginUser(formData) {
     const res = await axios.post(
       "https://8ce5efeae5e9.ngrok-free.app/api/auth/login/",
       { 
-        email, 
-        password 
+        email,
+        password
       },
       {
         headers: {
