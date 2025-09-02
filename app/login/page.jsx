@@ -1,8 +1,25 @@
+'use client';
+
 import AsideTemplate from "../components/AsideTemplate";
 import SectionCore from "../components/SectionCore";
 import BareBone from "../components/BareBone";
+import { useState } from "react";
+import { loginUser } from "../request-api/login";
+import { SubmitButton } from "../components/button-login/button";
 
 export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    async function handleSubmit(formData) {
+      const result = await loginUser(formData);
+      if (result.success) {
+        console.log("✅ Berhasil Login!", result.data);
+      } else {
+        console.log("❌ Gagal Login!", result);
+      }
+    }
+
     return (
         <>
             <BareBone>
@@ -23,7 +40,7 @@ export default function Login() {
                     </header>
                     <hr className="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />
                     <div id="input-form-and-button-remember-me-forgot-password-sign-in-button-sing-up-button" className="space-y-4">
-                        <form action="" className="">
+                        <form action={handleSubmit} className="">
                             <div id="email" className="mb-4">
                                 <label
                                   htmlFor=""
@@ -46,6 +63,10 @@ export default function Login() {
                                         "dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 " +
                                         "dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     }
+                                    name="email"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                    required
                                 />
                             </div>
                             <div id="password" className="mb-9">
@@ -70,6 +91,10 @@ export default function Login() {
                                         "dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 " +
                                         "dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     }
+                                    value={password}
+                                    name="password"
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
                                     />
 
                             </div>
@@ -108,17 +133,7 @@ export default function Login() {
                                   "
                                 >Forgot Password</a>
                             </div>
-                            <button
-                              className="
-                                w-full
-                                px-5 py-2.5
-                                text-white font-medium text-sm text-center
-                                bg-gradient-to-br from-green-400 to-blue-600
-                                rounded-lg
-                                hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 me-2
-                                md:text-base
-                              "
-                            >Sign In To Your Account</button>
+                              <SubmitButton />
                         </form>
                         <footer className="mb-2 md:mb-4 lg:mb-6 xl:mb-8 2xl:mb-10">
                             <p

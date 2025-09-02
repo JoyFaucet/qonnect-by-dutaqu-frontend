@@ -22,7 +22,7 @@ export default function register() {
                     ></div>
                     <div
                         className="absolute top-1/2 left-0 h-[3px] bg-gradient-to-br from-green-400 to-blue-600 -translate-y-1/2 rounded-full transition-all duration-300"
-                        style={{ width: "25%" }} // ganti sesuai step
+                        style={{ width: "50%" }} // ganti sesuai step
                     ></div>
 
                     {/* Step 1 */}
@@ -153,7 +153,7 @@ export default function register() {
                         <button
                           type="button"
                           className="
-                            px-4 py-2.5
+                            px-4 md:px-6 py-2.5
                             text-white font-medium text-sm text-center
                             bg-gradient-to-r from-cyan-500 to-blue-500
                             rounded-lg
@@ -164,7 +164,7 @@ export default function register() {
                         <button
                           type="button"
                           className="
-                            px-4 py-2.5
+                            px-4 md:px-6 py-2.5
                             text-white font-medium text-sm text-center
                             bg-gradient-to-br from-green-400 to-blue-600
                             rounded-lg
